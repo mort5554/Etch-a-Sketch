@@ -1,0 +1,23 @@
+.name{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.boardContainer{
+    display: flex;
+    justify-content: center;
+}
+.board{
+    width: 500px;
+    height: 500px;
+    display: grid;
+}
+#toolbar{
+    gap: 1px;
+}
+#boardSizeSpace{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

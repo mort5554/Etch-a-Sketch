@@ -1,4 +1,3 @@
-
 function boardSize(size){
 const board = document.querySelector(".board");
 board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -6,37 +5,49 @@ board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
 
 for(let i = 0; i<size*size; i++){
     let heks = document.createElement("div");
-    heks.setAttribute("id", "heks")
-    heks.style.backgroundColor = "blue";
+    draw(heks)
+    heks.style.backgroundColor = "white";
     board.insertAdjacentElement("beforeend", heks) ;
 }
+
 }
 boardSize(16)
 
-function changeBoardSize(){
+function changeBoardSize(size){
 const boardWidthInput = document.querySelector("#boardWidthInput")
 const btnChangeBoardSize = document.querySelector("#btnChangeBoardSize")
 btnChangeBoardSize.addEventListener("click", () =>{
     let size = boardWidthInput.value
-    if(size >=2 || size <= 100){
+    if(size >=2 && size <= 100){
         boardSize(size)
     }
     else{
-        alert("ERROR")
-        boardWidthInput.value = "ERROR"
+        alert("ERROR - Board out of range")
+        boardWidthInput.value = ""
     }
-    //boardWidthInput.value = ""
 })   
 }
 changeBoardSize()
 
-function changeColor(changeColor){
-    const heks = document.querySelectorAll("heks")
-    const color = document.querySelector("color")
-    let setColor = color.value
-    console.log(setColor)
-    heks.addEventListener("click",() => {
-        console.log("ds")
+function draw(heks){
+    heks.addEventListener("click", () => {
+        //changeColor(setColor)
         heks.style.backgroundColor = "black"
-    })
+    })    
 }
+
+/*function changeColor(color){
+    const colorChosen = document.querySelector("color")
+    colorChosen.addEventListener("input", () => {
+        let setColor = color.value
+        console.log(color.value)
+    })
+    /*color.addEventListener(
+        "input",
+        (event) => {
+          color.value
+        },
+        false,
+      );
+
+}*/

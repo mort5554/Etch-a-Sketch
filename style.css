@@ -1,18 +1,23 @@
 .name{
     display: flex;
+    font-size: 40px;
     justify-content: center;
     width: auto;
+    text-shadow: 1.3px 1.3px;
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .boardContainer{
     display: flex;
     justify-content: center;
+    padding: 8px;
 }
 .board{
     width: 500px;
     height: 500px;
     display: grid;
+    border: 5px inset black;
+    box-shadow: 4px 4px;
 }
 #toolbar{
     gap: 1px;

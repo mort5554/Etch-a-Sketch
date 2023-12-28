@@ -15,14 +15,22 @@
 </div>
 
 <div id="toolbar">
-    <h3>Draw</h3>
-    <label for="color">Color</label>
-    <input id="color" name="stroke" type="color">
-    <p id="boardSizeSpace"><label for="boardWidth">Board Size: </label></p>
-    <input id="boardWidthInput" name="boardWidth" type="number" value="16" >
-    <button id="btnChangeBoardSize">Change</button>
-    <!--onchange="changeBoardSize(this.value)"-->
+    <div class="colorsContainer">
+        <label for="color">Colors: </label>
+        <input id="chooseColor" name="stroke" type="color">
+        <button id="choosenColor">Click to use choosen color</button>
+        <button id="btnBlackColor">Black</button>
+        <button id="btnErase">Erase</button>
+        <button id="btnRGBColor">Random RGB color</button>
+    </div>
+    <div class="boardSizeContainer">
+        <p id="boardSizeSpace"><label for="boardWidth">Board Size: </label></p>
+        <input id="boardWidthInput" name="boardWidth" type="number" value="16">
+        <button id="btnChangeBoardSize">Change</button>
+        <!--onchange="changeBoardSize(this.value)"-->
+    </div>
 </div>
+
     <script src="main.js"></script>
 </body>
 </html>

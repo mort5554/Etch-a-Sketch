@@ -5,7 +5,11 @@ board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
 
 for(let i = 0; i<size*size; i++){
     let heks = document.createElement("div");
-    draw(heks)
+//    draw(heks)
+    drawBlackColor(heks)
+    drawErase(heks)
+    drawRGBColor(heks)
+    chooseColor(heks)
     heks.style.backgroundColor = "white";
     board.insertAdjacentElement("beforeend", heks) ;
 }
@@ -29,25 +33,48 @@ btnChangeBoardSize.addEventListener("click", () =>{
 }
 changeBoardSize()
 
-function draw(heks){
-    heks.addEventListener("click", () => {
-        //changeColor(setColor)
-        heks.style.backgroundColor = "black"
-    })    
+function drawErase(heks){
+    const erase = document.querySelector("#btnErase")
+    erase.addEventListener("click", () => {
+        const color = "white"
+        heks.addEventListener("click", () => {
+            heks.style.backgroundColor = color
+        })
+    })
 }
 
-/*function changeColor(color){
-    const colorChosen = document.querySelector("color")
-    colorChosen.addEventListener("input", () => {
-        let setColor = color.value
-        console.log(color.value)
+function drawBlackColor(heks){
+    const black = document.querySelector("#btnBlackColor")
+    black.addEventListener("click", () => {
+        const color = "black"
+        heks.addEventListener("click", () => {
+            heks.style.backgroundColor = color
+        })
     })
-    /*color.addEventListener(
-        "input",
-        (event) => {
-          color.value
-        },
-        false,
-      );
+}
 
-}*/
+function drawRGBColor(heks){
+    const RGBColor = document.querySelector("#btnRGBColor")
+    RGBColor.addEventListener("click", () => {
+        const R = Math.floor(Math.random() * 255)
+        const G = Math.floor(Math.random() * 255)
+        const B = Math.floor(Math.random() * 255)
+        heks.addEventListener("click", () => {
+            heks.style.backgroundColor = `rgb(${R}, ${G}, ${B})`
+        })
+    })
+}
+function chooseColor(heks){
+    const colorChosen = document.querySelector("#chooseColor")
+    const choosenColor = document.querySelector("#choosenColor")
+colorChosen.addEventListener("input", () => {
+    let setColor = colorChosen.value
+    console.log(colorChosen.value)
+        choosenColor.addEventListener("click", () => {
+            heks.addEventListener("click", () => {
+            heks.style.backgroundColor = `${setColor}`
+            console.log(setColor)
+        })
+    })
+})
+}

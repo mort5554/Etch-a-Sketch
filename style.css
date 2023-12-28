@@ -19,8 +19,18 @@
     border: 5px inset black;
     box-shadow: 4px 4px;
 }
+.colorsContainer{
+    display: flex;
+}
+.boardSizeContainer{
+    display: flex;
+}
 #toolbar{
-    gap: 1px;
+    display: inline;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
 }
 #boardSizeSpace{
     margin-top: 8px;

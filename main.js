@@ -10,6 +10,7 @@ for(let i = 0; i<size*size; i++){
     drawErase(heks)
     drawRGBColor(heks)
     chooseColor(heks)
+    clearBoard(heks)
     heks.style.backgroundColor = "white";
     board.insertAdjacentElement("beforeend", heks) ;
 }
@@ -61,20 +62,31 @@ function drawRGBColor(heks){
         const B = Math.floor(Math.random() * 255)
         heks.addEventListener("click", () => {
             heks.style.backgroundColor = `rgb(${R}, ${G}, ${B})`
+            RGBColor.style.backgroundColor = `rgb(${R}, ${G}, ${B})`
         })
     })
 }
+
 function chooseColor(heks){
     const colorChosen = document.querySelector("#chooseColor")
-    const choosenColor = document.querySelector("#choosenColor")
-colorChosen.addEventListener("input", () => {
-    let setColor = colorChosen.value
-    console.log(colorChosen.value)
-        choosenColor.addEventListener("click", () => {
-            heks.addEventListener("click", () => {
-            heks.style.backgroundColor = `${setColor}`
-            console.log(setColor)
-        })
+    const confirmColor = document.querySelector("#confirmColor")
+    colorChosen.addEventListener("input", () => {
+        let setColor = colorChosen.value
+        //colorChosen.style.backgroundColor = `${setColor}`
+        console.log(colorChosen.value)
+            confirmColor.addEventListener("click", () => {
+                heks.addEventListener("click", () => {
+                heks.style.backgroundColor = `${setColor}`
+                console.log(setColor)
+            })
     })
 })
+}
+
+function clearBoard(heks){
+    //const heks = document.querySelectorAll("div")
+    const btnCleardBoard = document.querySelector("#btnClearBoard")
+    btnCleardBoard.addEventListener("click", () => {
+        heks.style.backgroundColor = "white"
+    })
 }

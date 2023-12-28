@@ -1,0 +1,124 @@
+button{
+    cursor: crosshair;
+}
+@keyframes slideInDown{
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.name{
+    display: flex;
+    animation-name: slideInTop 3s ease-in 1s both;
+    font-size: 40px;
+    justify-content: center;
+    width: auto;
+    text-shadow: 1.3px 1.3px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: slideInDown 1.5s ease-in both;
+}
+#labelColor{
+    margin: 6px;
+    font-size: large;
+}
+#chooseColor{
+    color: brown;
+    background-color: rgb(146, 133, 133);
+    transition: transform 0.3s;
+    border: 2px solid grey;
+}
+#chooseColor:hover{
+    transform: translateY(-7px);
+    background-color: rgb(85, 83, 83);
+}
+#confirmColor{
+    color: black;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+#confirmColor:hover{
+    transform: translateY(-7px);
+    color: grey;
+    background-color: black;
+}
+#btnBlackColor{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+#btnBlackColor:hover{
+    transform: translateY(-7px);
+    color: white;
+    background-color: black;
+}
+#btnErase{
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+#btnErase:hover{
+    transform: translateY(-7px);
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+#btnRGBColor{
+    border: 2px solid black;
+    background-color: grey;
+    border-radius: 5px;
+    transition: transform 0.3s;
+
+}
+#btnRGBColor:hover{
+    transform: translateY(-7px);
+}
+#boardWidthInput{
+    color: black;
+    background-color: gray;
+    border: 2px solid black;
+    transition: transform 0.3s;
+    height: 20px;
+    border-radius: 3px;
+}
+#boardWidthInput:hover{
+    transform: translateY(7px);
+    color: grey;
+    background-color: black;
+    border: 2px solid grey;
+}
+#btnChangeBoardSize{
+    color: white;
+    background-color: grey;
+    border: 2px solid black;
+    height: 26px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+#btnChangeBoardSize:hover{
+    transform: translateY(7px);
+    background-color: white ;
+    color: grey;
+}
+#btnClearBoard{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    height: 26px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+#btnClearBoard:hover{
+    transform: translateY(7px);
+    background-color: black ;
+    color: white;
+    border: white;
+}

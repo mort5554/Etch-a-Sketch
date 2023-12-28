@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttonsStyle.css">
 </head>
 <body>
     
@@ -14,20 +15,24 @@
     </div>
 </div>
 
-<div id="toolbar">
+<div id="toolbarColors">
     <div class="colorsContainer">
-        <label for="color">Colors: </label>
+        <label id="labelColor" for="color">Colors: </label>
         <input id="chooseColor" name="stroke" type="color">
-        <button id="choosenColor">Click to use choosen color</button>
+        <button id="confirmColor">Click to use choosen color</button>
         <button id="btnBlackColor">Black</button>
         <button id="btnErase">Erase</button>
         <button id="btnRGBColor">Random RGB color</button>
     </div>
+</div>
+
+<div id="toolbarBoard">
     <div class="boardSizeContainer">
-        <p id="boardSizeSpace"><label for="boardWidth">Board Size: </label></p>
+        <p id="labelColor"><label for="boardWidth">Board Size: </label></p>
         <input id="boardWidthInput" name="boardWidth" type="number" value="16">
         <button id="btnChangeBoardSize">Change</button>
         <!--onchange="changeBoardSize(this.value)"-->
+        <button id="btnClearBoard">Clear Board</button>
     </div>
 </div>
 

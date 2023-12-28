@@ -1,11 +1,5 @@
-.name{
-    display: flex;
-    font-size: 40px;
-    justify-content: center;
-    width: auto;
-    text-shadow: 1.3px 1.3px;
-    font-weight: bold;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body{
+    background-color: rgb(184, 177, 165);
 }
 .boardContainer{
     display: flex;
@@ -19,20 +13,33 @@
     border: 5px inset black;
     box-shadow: 4px 4px;
 }
-.colorsContainer{
+
+    #toolbarColors{
     display: flex;
-}
-.boardSizeContainer{
-    display: flex;
-}
-#toolbar{
-    display: inline;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    width: 600px;
+    height: 90px;
 }
-#boardSizeSpace{
-    margin-top: 8px;
-    margin-bottom: 8px;
+.colorsContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+.colorsContainer > button{
+    margin: 6px;
+    height: 30px;
+}
+
+    
+    #toolbarBoard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    gap: 6px;
+    width: 500px;
+}
+
